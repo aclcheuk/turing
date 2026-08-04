@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Ignore standard Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Mac system files (if you are on a Mac)
+.DS_Store
