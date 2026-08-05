@@ -2,9 +2,16 @@ import streamlit as st
 import numpy as np
 from scipy.signal import convolve2d
 import matplotlib.pyplot as plt
+from theory import theory
 
 # ---Streamlit Setup---
-st.title("Turing Pattern Simulator")
+st.set_page_config(page_title="Turing Pattern Simulator", page_icon=":leopard:")
+st.title("Turing Pattern Simulator :leopard:")
+
+# Allow user to read Background and Theory
+with st.expander("Background and Theory"):
+    theory()
+
 st.markdown("Adjust the parameters and run the simulation to see your Turing patterns emerge.")
 
 # Sidebar for parameters
