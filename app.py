@@ -2,11 +2,20 @@ import streamlit as st
 import numpy as np
 from scipy.signal import convolve2d
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
 from theory import theory
 
 # ---Streamlit Setup---
 st.set_page_config(page_title="Turing Pattern Simulator", page_icon=":leopard:")
 st.title("Turing Pattern Simulator :leopard:")
+
+# Colour Palette Selection
+def custom_colour():
+    colour_a = st.color_picker("Choose Colour A", "#459558")
+    colour_b = st.color_picker("Choose Colour B", "#48489f")
+    intermediate_colour = st.color_picker("Intermediate Colour", "#ffffff")
+    colour_scheme = mcolors.LinearSegmentedColormap.from_list("Custom", [colour_a, intermediate_colour, colour_b])
+    return colour_scheme
 
 # Allow user to read Background and Theory
 with st.expander("Background and Theory"):
@@ -21,7 +30,13 @@ with st.sidebar:
     k = st.slider("Kill Rate (k)", 0.045, 0.070, 0.062, 0.001)
     Da = st.slider("Diffusion A (Da)", 0.5, 1.5, 1.0, 0.1)
     Db = st.slider("Diffusion B (Db)", 0.1, 0.8, 0.5, 0.1)
-    iterations = st.number_input("Number of Time Steps", 100, 200000, 10000, 100)
+    iterations = st.number_input("Number of Time Steps", 100, 20000, 10000, 100)
+    st.subheader("Colour Scheme")
+    colour_scheme = st.radio("Colour Scheme", options=["RdBu", "bone", "viridis", "inferno", "Custom"])
+    if colour_scheme == "Custom":
+        colour_scheme = custom_colour()
+    else:
+        colour_scheme = colour_scheme
 
 # ---Maths Setup---
 # The 3x3 Laplacian kernel for calculating 2D diffusion
@@ -76,7 +91,7 @@ if st.button("Run Simulation"):
             progress_bar.progress(i / iterations)
             # We visualize Substance B (the inhibitor)
             fig, ax = plt.subplots(figsize=(5, 5))
-            ax.imshow(B, cmap="bone", interpolation='bicubic') 
+            ax.imshow(B, cmap=colour_scheme, interpolation='bicubic')
             ax.axis('off')
             image_placeholder.pyplot(fig)
             plt.close(fig) # Free up memory
