@@ -89,7 +89,7 @@ if st.button("Run Simulation"):
         # Update the UI every 50 iterations to avoid freezing
         if i % 50 == 0:
             progress_bar.progress(i / iterations)
-            # We visualize Substance B (the inhibitor)
+            # We visualise morphogen B (the inhibitor)
             fig, ax = plt.subplots(figsize=(5, 5))
             ax.imshow(B, cmap=colour_scheme, interpolation='bicubic')
             ax.axis('off')

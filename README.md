@@ -14,7 +14,7 @@ An interactive Streamlit app to simulate and visualise the formation of Turing (
 ## Installation
 To run this project locally:
 1) `git clone https://github.com/aclcheuk/turing.git`
-2) `conda env create -f environment.yml`
+2) `conda env create -f environment.yml` N.B. `source ~/.bashrc`
 3) `conda activate turing-env`
 4) `streamlit run app.py`
 
