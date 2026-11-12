@@ -1,7 +1,6 @@
 # Turing Pattern Simulator - Streamlit App
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
+[![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://devguide.python.org/versions/)
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://your-app-url.streamlit.app](https://your-app-url.streamlit.app))
 
 An interactive Streamlit app to simulate and visualise the formation of Turing (Reaction-Diffusion) Patterns.
