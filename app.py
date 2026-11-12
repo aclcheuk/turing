@@ -30,7 +30,7 @@ with st.sidebar:
     k = st.slider("Kill Rate (k)", 0.045, 0.070, 0.062, 0.001)
     Da = st.slider("Diffusion A (Da)", 0.5, 1.5, 1.0, 0.1)
     Db = st.slider("Diffusion B (Db)", 0.1, 0.8, 0.5, 0.1)
-    iterations = st.number_input("Number of Time Steps", 100, 20000, 10000, 100)
+    iterations = st.number_input("Number of Time Steps", 100, 20000, 5000, 100)
     st.subheader("Colour Scheme")
     colour_scheme = st.radio("Colour Scheme", options=["RdBu", "bone", "viridis", "inferno", "Custom"])
     if colour_scheme == "Custom":
