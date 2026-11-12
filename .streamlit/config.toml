@@ -1,7 +1,8 @@
 [theme]
-primaryColor = "#030ea4"
+primaryColor = "#05575f"
 backgroundColor = "#a6b1a4"
 secondaryBackgroundColor = "#67a856"
+linkColor = "#0e20c2"
 
 textColor = "#0b0202"
 
