@@ -9,12 +9,12 @@ An interactive Streamlit app to simulate and visualise the formation of Turing (
 ## Features
 - **Interactive Simulation** - Streamlit slider widgets to control parameters such as feed rate and kill rate
 - **Real-time Visualisation** - Watch the patterns develop as the simulation calculates the reaction-diffusion equations
-**Mathematical Precision** - Using `Numpy` and `Scipy` for efficient and vectorised computation of differential equations
+- **Mathematical Precision** - Using `Numpy` and `Scipy` for efficient and vectorised computation of differential equations
 
 ## Installation
 To run this project locally:
 1) `git clone https://github.com/aclcheuk/turing.git`
-2) `conda env create -f environment.yml` N.B. `source ~/.bashrc`
+2) `conda env create -f environment.yml`
 3) `conda activate turing-env`
 4) `streamlit run app.py`
 
